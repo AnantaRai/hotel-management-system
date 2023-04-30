@@ -8,9 +8,9 @@
 <!-- CSS -->
 <!-- <link rel="stylesheet" href="../css/buttons.css"></link> -->
 <!-- <link rel="stylesheet" href="../css/common.css"></link> -->
-<?php 
+<?php
     require_once('links.php');
-?> 
+?>
 <!-- Navbar -->
 <nav id="nav-bar" class="navbar navbar-expand-lg bg-body-tertiary bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
     <div class="container-fluid">
@@ -46,9 +46,9 @@
     </div>
 
     <!-- Session array -->
-    
+
     <?php
-    if (isset($_SESSION['login']) && $_SESSION['login'] == true) 
+    if (isset($_SESSION['login']) && $_SESSION['login'] == true)
     {
         $path = USERS_IMG_PATH;
 
@@ -60,7 +60,7 @@
                     </button>
                         <ul class="dropdown-menu dropdown-menu-lg-end">
                             <li><button class="dropdown-item" href="profile.php">Profile</button></li>
-                            <li><button class="dropdown-item" href="bookings.php">Booking</button></li>
+                            <li><a class="dropdown-item" href="bookings.php">Booking</a></li>
                             <a class="dropdown-item" href="logout.php">Log Out</a>
 
                         </ul>
@@ -73,7 +73,7 @@
                     <button type="button" class="btn btn-primary custom-btn shadow-none me-lg-2 me-3" data-bs-toggle="modal" data-bs-target="#loginModal">
                         Log In
                     </button>
-            
+
                     <button type="button" class="btn btn-primary custom-btn shadow-none" data-bs-toggle="modal" data-bs-target="#registerModal">
                         Register
                     </button>
@@ -81,7 +81,7 @@
                 data;
     }
     ?>
-    
+
 
 
 </nav>
