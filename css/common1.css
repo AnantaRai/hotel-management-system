@@ -1,0 +1,60 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.h-class {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0; 
+} */
+
+/* input[type=number]{
+    -moz-appearance: textfield;
+} */
+
+.custom-bg{
+    background-color: ghostwhite;
+}
+
+/* .custom-bg:hover{
+    background-color: #BCD9D7;
+} */
+.custom-alert{
+    position: fixed;
+    top: 80px;
+    right: 25px;
+    z-index: 1111;
+}
+.custom-alert{
+    position: fixed;
+    top: 80px;
+    right: 25px;
+}
+
+.custom-btn{
+    background-color:#5EB0D3 !important;
+}
+.h-line{
+    width: 150px;
+    margin: 0 auto;
+    height: 1.7px;
+}
+
+/* #dashboard-menu{
+    position: fixed;
+    height: 100%;
+}
+
+@media screen and (max-width: 991px){
+    #dashboard-menu{
+        height: auto;
+        width: 100%;
+    }
+    #main-content{
+        margin-top: 60px;
+    }
+} */
