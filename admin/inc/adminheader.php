@@ -16,6 +16,19 @@
                         <a class="nav-link text-white" href="dashboard.php">Dashboard</a>
                     </li>
                     <li class="nav-item">
+                        <button class="btn text-white px-3 w-100 shadow-none text-start d-flex align-items-center justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#bookingLinks">
+                            <span>Bookings</span>
+                            <span><i class="bi bi-caret-down-fill"></i></span>
+                        </button>
+                        <div class="collapse show px-3 small mb-1" id="bookingLinks">
+                            <ul class="nav nav-pills flex-column rounded border border-secondary">
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="new_bookings.php">New Bookings</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-white" href="users.php">Users</a>
                     </li>
                     <li class="nav-item">
@@ -24,7 +37,7 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" href="rooms.php">Rooms</a>
                     </li>
-                    
+
                     <li class="nav-item">
                         <a class="nav-link text-white" href="features_facilities.php">Features and Facilities</a>
                     </li>
