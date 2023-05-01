@@ -55,7 +55,7 @@
                 {
                     $btn =  "<a href='generate_pdf.php&gen_pdf&id=$data[booking_id]' class='btn btn-dark btn-sm shadow-none'>Download PDF</a> <button type='button' class='btn btn-dark btn-sm shadow-none'>Rate & Review</button>";
                 }else {
-                    $btn = "<button type='button' class='btn btn-danger btn-sm shadow-none'>Cancel</button>";
+                    $btn = "<button onclick='cancel_booking($data[booking_id])' type='button' class='btn btn-danger btn-sm shadow-none'>Cancel</button>";
                 }
             }else if($data['booking_status'] == "cancelled") {
                 $status_bg = "bg-danger";
@@ -95,9 +95,34 @@
                 bookings;
         }
     ?>
+
+    <?php
+        if(isset($_GET['cancel_status'])) {
+            alert('success', 'Booking Cancelled!');
+        }
+    ?>
     <!-- Footer -->
     <?php require('inc/footer.php'); ?>
+    <script>
+        function cancel_booking(id)
+        {
+            if(confirm('Are you sure you want to cancel this booking?')) {
+                let xhr = new XMLHttpRequest();
+                xhr.open("POST", "ajax/cancel_booking.php", true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
+                xhr.onload = function () {
+                    if(this.responseText == 1){
+                        window.location.href="bookings.php?cancel_status=true";
+                    }else {
+                        alert("error", "Cancelation Failed");
+                    }
+                }
+                xhr.send('cancel_booking&id='+id);
+            }
+
+        }
+    </script>
 </body>
 
 </html>

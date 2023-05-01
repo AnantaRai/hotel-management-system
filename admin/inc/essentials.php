@@ -45,7 +45,7 @@
     function alert($type,$msg){
         $bs_class = ($type=="success") ? "alert-success":"alert-danger"; //alert-success,danger class
         echo <<<alert
-            <div class="alert $bs_class alert-dismissible fade show custom-alert" role="alert">
+            <div class="alert $bs_class alert-dismissible fade show custom-alert position-fixed" role="alert">
                 <strong class="me-3">$msg</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -117,7 +117,7 @@
             else{
                 return 'upd_failed';
             }
-            
+
         }
     }
 
@@ -131,7 +131,7 @@
             return 'inv_img';                      //invalid image mime or format
         }
         else if(($image['size']/(1024*1024))>1){
-            return 'inv_size';                     //invalid size greater than 1mb 
+            return 'inv_size';                     //invalid size greater than 1mb
         }
         else{
             $ext = pathinfo($image['name'],PATHINFO_EXTENSION);
